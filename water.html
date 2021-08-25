@@ -1,0 +1,112 @@
+<html>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  #pot {
+    bottom: 15%;
+    position: absolute;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 8s;
+  }
+  @-webkit-keyframes run {
+    0% {
+      left: 0;
+    }
+    48% {
+      -webkit-transform: rotateY(0deg); 
+    }
+    50% { 
+      left: calc(100% - 100px);
+      -webkit-transform: rotateY(180deg); 
+    }
+    99% {
+      -webkit-transform: rotateY(180deg); 
+    }
+    100% {
+      left: 0;    
+      -webkit-transform: rotateY(0deg);
+    }
+  }
+  .card {
+    flex-direction: row;
+  }
+  .card img {
+    width: 40%;
+  }
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #0080ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #0040ff;
+}
+
+body {
+    text-align: center;
+}	  
+	  
+</style>
+	
+	
+</head>
+<body class="p-3 m-3">
+  <nav class="navbar navbar-light bg-light m-0 p-0">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.pinimg.com/originals/e9/c0/8d/e9c08d810eaf2a5601dfec188438f473.gif" width="58" height="45" class="d-inline-block align-top" alt="">
+      <span class="navbar-text">Health Tracking System</span>
+      <div id="pot">
+        <img src="https://media1.giphy.com/media/hFVrwYJaIz0uk/giphy.gif?cid=790b7611b53c2f088d42e7642640814c8a5e613bc409ef11&rid=giphy.gif&ct=s" width=50px height=40px>
+      </div>
+    </a>
+  </nav>
+  <br/>
+<label style="padding-top:4%; font-size:25px;">Water Recording</label>
+<image src="https://media2.giphy.com/media/y6yVGEQUH67oGVOTCw/giphy.gif?cid=790b761116aadcde23f7436e788d748ccdcb1dad56ed1e50&rid=giphy.gif&ct=s" style="width:90px;height:90px; margin-bottom: 15px;"></image>
+<div class="container" style="width:80%">
+    <form action="/action_page.php" class="center">
+        <input style="margin-top:6%; margin-bottom: 20%;" type="text" id="target" name="target" placeholder="Daily Target ..."><br>
+    
+        <button style="width:100%; margin-right: 5px;" type="button" class="btn btn-info">EDIT</button>
+        <button id="submitButton" style="width:100%; margin-top: 8px;" type="button" class="btn btn-success">SUBMIT</button>
+    </form>
+</div>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
+
+<script type="text/javascript">
+    document.getElementById("submitButton").onclick = function () {
+        location.href = "content-water.html";
+    };
+</script>
